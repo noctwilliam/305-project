@@ -136,8 +136,7 @@ def adminauth():
         print("Name\t\t\tAge\tNumber\t\tChronic Illness\t\tUrgency")
         print("-------------------------------------------------------------------------------------------")
         for x in patdata:
-            print(x.name + "\t\t\t" + x.age + "\t" + x.number +
-                  "\t" + x.illness + "\t\t\t" + x.urgency)
+            print(x.name + "\t\t\t" + x.age + "\t" + x.number + "\t" + x.illness + "\t\t\t" + x.urgency)
     elif choice == 2:
         searchname = input("Enter the name to be searched: ")
         for x in patdata:
@@ -145,8 +144,7 @@ def adminauth():
                 print("Name\t\t\tAge\tNumber\t\tChronic Illness\tUrgency")
                 print(
                     "-------------------------------------------------------------------------------------------")
-                print(x.name + "\t\t\t" + x.age + "\t" + x.number +
-                      "\t" + x.illness + "\t\t\t" + x.urgency)
+                print(x.name + "\t\t\t" + x.age + "\t" + x.number + "\t" + x.illness + "\t\t\t" + x.urgency)
                 value = True
                 break
             else:
@@ -200,8 +198,7 @@ def display():  # static method
             age = int(input("Enter your age: "))
             number = input("Enter your phone number: ")
             illness = input("Do you have any chronic illness: ")
-            obj = Patient(name, age, number, illness,
-                          urgencylevel(illness, age, name))
+            obj = Patient(name, age, number, illness, urgencylevel(illness, age, name))
             data = name + ";" + str(age) + ";" + number + ";" + \
                 illness + ";" + urgencylevel(illness, age, name)
             patient.append(obj)  # append object to list
