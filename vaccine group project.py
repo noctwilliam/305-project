@@ -151,7 +151,6 @@ def adminauth():
                 value = False
         if value == False:
             print("Patient does not exist")
-        display()
     elif choice == 3:
         nilai = True
         admindata = []
