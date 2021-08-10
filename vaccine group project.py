@@ -229,6 +229,5 @@ def signboard():
     print("2 - Admin")
     print("3 - Exit")
 
-
 display()
 end()
