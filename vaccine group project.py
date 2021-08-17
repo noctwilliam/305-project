@@ -66,7 +66,7 @@ def urgencylevel(chronic_ill, age, name):  # static method
         elif age > 60:
             lvl = "Urgent"
     if name.lower() == "ammar":
-        lvl = "Urgent nak mampus"
+        lvl = "Urgent nak mampus, terpaling urgent"
     if name.lower() == "bb":
         lvl = "kayangan"
     return lvl
