@@ -8,27 +8,6 @@ class Patient:
         self.illness = chronic_ill
         self.urgency = urgency
 
-    def getName(self):  # getter
-        return self.name
-
-    def getAge(self):
-        return self.age
-
-    def getNumber(self):
-        return self.number
-
-    def getIllness(self):
-        return self.illness
-#nnt guna split() as delimiter untuk file
-#range is < (var), not <= (var)
-class Patient:
-    def __init__(self, name, age, number, chronic_ill, urgency):  # normal constructor
-        self.name = name
-        self.age = age
-        self.number = number
-        self.illness = chronic_ill
-        self.urgency = urgency
-
     def getName(self): #getter
         return self.name
 
