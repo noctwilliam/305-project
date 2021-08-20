@@ -11,13 +11,13 @@ class Patient:
     def getName(self): #getter
         return self.name
 
-    def getAge(self):
+    def getAge(self): #getter
         return self.age
 
-    def getNumber(self):
+    def getNumber(self): #getter
         return self.number
 
-    def getIllness(self):
+    def getIllness(self): #getter
         return self.illness
 
 class Admin:
