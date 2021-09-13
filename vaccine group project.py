@@ -44,10 +44,6 @@ def urgencylevel(chronic_ill, age, name):  # static method
             lvl = "Not Urgent"
         elif age > 60:
             lvl = "Urgent"
-    if name.lower() == "ammar":
-        lvl = "Urgent nak mampus, terpaling urgent"
-    if name.lower() == "bb":
-        lvl = "kayangan"
     return lvl
 
 def append_new_line(filename, args):
