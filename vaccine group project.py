@@ -133,17 +133,42 @@ def adminauth():
     elif choice == 2:
         searchname = input("Enter the name to be searched: ")
         for x in patdata:
-            if searchname == x.name:
+            if searchname == x.name.lower():
                 print("Name\t\t\tAge\tNumber\t\tChronic Illness\tUrgency")
                 print("-------------------------------------------------------------------------------------------")
                 print(x.name + "\t\t\t" + x.age + "\t" + x.number + "\t" + x.illness + "\t\t\t" + x.urgency)
                 value = True
-                break
+                print("\n1 - Go to admin options")
+                print("2 - Return to homepage (Yes/No)")
+                print("3 - Exit")
+                choice = int(input("Enter your choice: "))
+                if choice == 1:
+                    adminlist = []
+                    readadmin = open("admindata.txt", "r")  # opens the file
+                    for i in readadmin:
+                        datamin = i.split(";")  # splits the line into list using delimiter ;
+                        un = datamin[0]
+                        pw = datamin[1]
+                        obj = Admin(un, pw)  # instantiating object
+                        adminlist.append(obj)  # append object into list
+                    pw = input("Enter your password: ")
+                    for i in adminlist:
+                        if i.password == pw:
+                            adminauth()
+                            value = True
+                            break
+                        elif i.password != pw:
+                            value = False
+                    if value == False:
+                        print("\n\nWrong password but nice try tho :D")
+                elif choice == 2:
+                    display()
+                else:
+                    pass
             else:
                 value = False
         if value == False:
             print("Patient does not exist")
-        display()
     elif choice == 3:
         nilai = True
         admindata = []
@@ -163,6 +188,7 @@ def adminauth():
                 data = newusername + ";" + newpassword
                 append_new_line("admindata.txt", data)
                 nilai = True
+                break
             elif paw != i.password:
                 nilai = False
         if nilai == False:
