@@ -64,7 +64,7 @@ def admin():
     adminlist = []
     username = input("\nEnter your username: ")
     pasw = input("Enter your password: ")
-    readadmin = open("305-vaccine-project/admindata.txt", "r")  # opens the file
+    readadmin = open("admindata.txt", "r")  # opens the file
     for i in readadmin:
         datamin = i.split(";")  # splits the line into list using delimiter ;
         un = datamin[0]
@@ -114,7 +114,7 @@ def adminauth():
     print("4 - Exit")
     patdata = []
     choice = int(input("\nChoose your option: "))
-    baca = open("305-vaccine-project/patientdata.txt", "r")
+    baca = open("patientdata.txt", "r")
     for x in baca:
         data = x.split(";")
         name = data[0]
