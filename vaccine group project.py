@@ -147,7 +147,7 @@ def adminauth():
     elif choice == 3:
         nilai = True
         admindata = []
-        readadmin = open("305-vaccine-project/admindata.txt", "r")
+        readadmin = open("admindata.txt", "r")
         for i in readadmin:
             data = i.split(";")
             username = data[0]
@@ -161,7 +161,7 @@ def adminauth():
                 newusername = input("Enter new admin username: ")
                 newpassword = input("Enter new admin password: ")
                 data = newusername + ";" + newpassword
-                append_new_line("305-vaccine-project/admindata.txt", data)
+                append_new_line("admindata.txt", data)
                 nilai = True
             elif paw != i.password:
                 nilai = False
@@ -190,7 +190,7 @@ def display():  # static method
             obj = Patient(name, age, number, illness, urgencylevel(illness, age, name))
             data = name + ";" + str(age) + ";" + number + ";" + illness + ";" + urgencylevel(illness, age, name)
             patient.append(obj)  # append object to list
-            append_new_line("305-vaccine-project/patientdata.txt", data)
+            append_new_line("patientdata.txt", data)
             print("\nYour data has been added to our database, your appointment will soon be given via phone.")
             opt = input("\nDo you want to use the system again? (Yes/No): ")
         elif choice == 2:
